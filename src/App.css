@@ -2,37 +2,712 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  max-width: 100px;
+  background-color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #ffffff;
   color: white;
+  position: relative;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.contact-info {
+  margin-top: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
+#contact {
+  color: rgba(0, 0, 0, 0.726);
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 14px;
+  color: black;
+}
+
+
+/* Add this CSS to make the sticky-contents sticky */
+.sticky-contents {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
+  background-color: white; /* Set the background color as needed */
+  padding-bottom: 5px; /* Add padding as needed */
+}
+/* Styles for the custom alert */
+.custom-alert {
+  position: fixed;
+  top: 120px;
+  right: 10px;
+  background-color: #539b57; /* Green background color for success */
+  color: #fff; /* White text color */
+  padding: 10px;
+  z-index: 999; /* Ensure the alert displays over other content */
+  border-radius: 8px;
+}
+
+/* Close button style */
+.custom-alert button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  float: right;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+/* ... (other existing styles) ... */
+
+.socialmedia{
+  margin-top: 12px;
+  font-size: 14px;
+}
+.instagram{
+  color: #E1306C;
+}
+.navbar {
+  padding-top: 15px;
+  /*  Add box shadow properties here */
+}
+
+.navbar a {
+  border-radius: 3px;
+  font-size: larger;
+  color: rgb(0, 130, 252);
+  margin-right: 1px;
+  text-decoration: none;
+  padding: 9px 15px;
+  background-color: transparent;
+}
+.about-content {
+  margin-left: 12px;
+  margin-bottom: 12px;
+  margin-right: 12px;
+}
+
+#contactsection{
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
+  margin-left: 42px;
+  margin-right: 42px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+/* ... (other existing styles) ... */
+
+#welcome {
+  margin-top: 2px;
+  margin-left: 42px;
+  margin-right: 42px;
+}
+
+#slideshow {
+  margin-top: 12px;
+  margin-left: 42px;
+  margin-right: 42px;
+}#aboutsection {
+  margin-top: 69px; /* Use the same margin-top as in #welcome */
+  margin-left: 42px;
+  margin-right: 42px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
+  
+}
+
+.navbar-container {
+  position: relative;
+}
+
+/* .logo-line {
+  position: absolute;
+  top: 0;
+  left: 1%;
+  width: 74%;
+  height: 2px;
+  background-color: rgb(0, 130, 252);
+  transform-origin: bottom right;
+  transform: rotate(-119deg);
+}
+
+.navbar-line {
+  width: 91.888898889%;
+  height: 2px;
+  background-color: rgb(0, 130, 252);
+  position: absolute;
+  bottom: 0;
+  left: 8.11118111119%;
+  transform: translateY(100%);
+}
+
+.logo-line .section {
+  background-color: #252525;
+}
+
+.navbar-line .section {
+  background-color: #252525;
+} */
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.welcome-content {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 44px;
+  border-radius: 8px;
+  margin-top: 24px;
+}
+
+.section-slide {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.welcome-text {
+  flex: 1;
+  padding-right: 20px;
+  text-align: left;
+  font-size: large;
+}
+
+.welcome-text p {
+  font-size: 20px;
+}
+
+.welcome-title {
+  color: blue;
+  font-size: 44px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.printers-title {
+  color: black;
+  font-size: 36px;
+  font-weight: bold;
+  display: block;
+  margin-top: 0;
+}
+
+.welcome-actions {
+  display: flex;
+  align-items: flex-start;
+}
+
+.welcome-actions .quote-button {
+  padding: 15px 23px;
+  background: #0C41FF;
+  border-radius: 7px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-top: 50px;
+}
+
+.welcome-image img {
+  max-width: 100%;
+}
+
+/* ... (remaining styles) ... */
+
+.slideshow-section {
+  text-align: center;
+  padding: 10px 0;
+  height: 100%;
+}
+
+.slideshow-container {
+  width: 100%;
+  height: 340px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 75%;
+  background-color: transparent;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  transform: translateY(-50%); /* Center vertically */
+}
+
+.prev {
+  left: 0; /* Position on the right side */
+  right: auto; /* Reset left property */
+}
+.next {
+  right: 0; /* Position on the right side */
+  left: auto; /* Reset left property */
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* ... (other styles) ... */
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.nav-link.active {
+  color: #0a52b1;
+  font-size:x-large;
+}
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in-element.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  /* background-color: rgba(0, 0, 0, 0.295); */
+  color: white;
+  padding: 10px;
+  font-size: 28px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
   from {
-    transform: rotate(0deg);
+    opacity: .4
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1
   }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* ... (existing styles) ... */
+
+.contact-content {
+  text-align: center;
+  padding: 0px 0;
+}
+
+.contact-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.contact-details {
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.contact-form {
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+  /* border: 1px solid #ddd; */
+  /* border-radius: 8px; */
+  background-color: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.contact-form h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* CSS */
+.form-group {
+  display: flex; /* Use flexbox to control alignment */
+  align-items: center; /* Vertically align items in the center */
+}
+
+.form-group label {
+  flex: 1; /* Allow the label to grow and fill available space */
+  text-align: left; /* Align label text to the left */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  flex: 1.9; /* Allow the input field to grow and fill available space */
+  text-align: right; /* Align input text to the right */
+}
+
+
+.form-group input,
+.form-group textarea {
+  width: 65%;
+  padding: 2px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: #0C41FF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #095fcc;
+}
+
+.nav-toggle {
+  display: none;
+}
+/* CSS for fade-in animation with moving-up effect */
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px); /* Adjust the desired initial Y offset */
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.fade-in-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* Add this CSS for the responsive navbar */
+@media screen and (max-width: 600px) {
+  #welcome {
+    margin-top: 2px;
+    margin-left: 22px;
+    margin-right: 22px;
+}
+  .sticky-contents {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
+    background-color: white;
+    padding-bottom: 9px;
+}
+#slideshow{
+  padding-bottom: 22px;
+  margin-left: 22px;
+  margin-right: 22px;
+}
+  #contact {
+    color: rgba(0, 0, 0, 0.726);
+    font-weight: 600;
+    font-size: 11px;
+    margin-top: 22px;
+}
+  .navbar a{
+    font-size: 12px;
+    background-color: transparent;
+  }  
+  .nav-link.active{
+    font-size: 16px;
+  }
+  .navbar {
+    padding-top: 32px;
+    margin-left: 26px;
+}
+  
+  .logo-line {
+    display:none;
+}
+.navbar-line {
+  display:none;
+
+}
+.logo {
+  max-width: 80px;
+  background-color: transparent;
+}
+.welcome-content {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-left: 44px; */
+  border-radius: 8px;
+  margin-top: 14px;
+  padding-left: 0px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: space-between;
+}
+.welcome-title {
+  color: blue;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.printers-title {
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  display: block;
+  margin-top: 0;
+}
+.introwel {
+  font-size: 15px;
+  padding-left: 20px;
+  
+}
+.welcome-text p{
+  font-size: 15px;
+  padding-left: 20px;
+}
+.welcome-text{
+  padding-right: 0%;
+}
+.welcome-actions {
+  display: flex;
+  align-items: flex-start;
+  align-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column-reverse;
+}
+.welcome-actions .quote-button {
+  padding: 8px 13px;
+  background: #0C41FF;
+  border-radius: 7px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-top: 1px;
+}
+.quote-button{
+  margin-left: 63.9%;
+  margin-bottom: 62%;
+  position:absolute;
+}
+.welcome-image{
+  padding-top: 12px;
+  display: block;
+  max-width: 100%;
+}
+.slideshow-container {
+  width: 100%;
+  height: 70px;
+  position: relative;
+  margin: auto;
+}
+.prev {
+    left: 0;
+    right: auto;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 95%;
+    background-color: transparent;
+    width: auto;
+    padding: 16px;
+    margin-top: -10px;
+    color: white;
+    font-weight: bold;
+    font-size: 8px;
+    transition: 0.6s ease;
+    -webkit-user-select: none;
+    user-select: none;
+    transform: translateY(-50%);
+}
+.overlay-text {
+  position: absolute;
+  top: 25%;
+  left: 16.5%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 10px;
+  font-size: 13px;
+  text-align: center;
+}
+
+#aboutsection {
+    margin-top: 10px;
+    margin-left: 22px;
+    margin-right: 22px;
+    padding-left:12px;
+    padding-right:12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+#contactsection{
+  margin-top: 10px;
+  margin-left: 22px;
+  margin-right: 22px;
+}
+h2 {
+  font-size: 10px;
+  margin-bottom: 12px;
+}
+.contact-content {
+  text-align: center;
+  padding: 0px 0;
+}
+.contact-content h2 {
+  font-size:20px;
+  margin-bottom: 10px;
+}
+.contact-content p {
+  font-size: 13px;
+  margin: 1px 30px 12px;
+}
+.contact-form {
+  max-width: 500px;
+  margin: 22px;
+  padding: 5px;
+}
+.contact-form h3 {
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+.form-group label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 2px;
+  font-size: 16px;
+  flex: 1.9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form-group {
+  margin-bottom: 1px;
+}
+
+button[type="submit"] {
+  background-color: #0C41FF;
+  color: white;
+  border: none;
+  margin-left:35%;
+  margin-right:35%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 }
